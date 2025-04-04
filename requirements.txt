@@ -1,11 +1,10 @@
-asyncpg==0.30.0
-greenlet==3.1.1
 aiosmtplib==2.0.2
 aiosqlite==0.20.0
 alembic==1.13.2
 annotated-types==0.7.0
 anyio==4.4.0
 async-timeout==4.0.3
+asyncpg==0.30.0
 black==24.8.0
 blinker==1.8.2
 cfgv==3.4.0
@@ -20,6 +19,7 @@ fastapi==0.112.0
 fastapi-mail==1.4.1
 filelock==3.15.4
 flake8==7.1.1
+greenlet==3.1.1
 h11==0.14.0
 identify==2.6.0
 idna==3.7
