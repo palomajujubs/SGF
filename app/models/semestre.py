@@ -1,4 +1,4 @@
-from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Column, DateTime, ForeignKey, Integer
 from sqlalchemy.orm import relationship
 
 from app.core.configs import settings
@@ -9,7 +9,6 @@ class Semestre(settings.DBBaseModel):
     __tablename__ = "semestres"
 
     id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String, unique=True, index=True)
     ano = Column(Integer, index=True)
     data_inicio = Column(DateTime, index=True)
     data_fim = Column(DateTime, index=True)
