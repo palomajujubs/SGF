@@ -35,14 +35,6 @@ async def teste(session: AsyncSession = Depends(get_session)) -> str:
 async def enviar_link_acesso(email_schema: EmailSchema):
     email = email_schema.email
 
-    if not email.endswith("@fesfsus.ba.gov.br"):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=(
-                "Apenas emails com o domínio @fesfsus.ba.gov.br são autorizados a receber o link de acesso."
-            ),
-        )
-
     # Simulando a criação do token sem armazenar o email no banco
     token = create_token_form_access(sub=email)
 

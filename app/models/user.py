@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean
-from app.core.configs import settings
+from app.core.configs import settingssource .venv/bin/activate
 
 
 # Tabela de users

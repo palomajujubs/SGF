@@ -10,4 +10,8 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "python.createEnvironment.trigger": "off",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.commandsToSkipShell": [
+        ""
+    ],
 }
