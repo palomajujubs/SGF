@@ -1,4 +1,5 @@
-from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
 
 from app.core.configs import settings
 
@@ -13,3 +14,6 @@ class User(settings.DBBaseModel):
     email = Column(String, unique=True, index=True)
     role = Column(String, default="user")
     is_active = Column(Boolean, default=True)
+    # relacionamento com a tabela de semestres
+    user_id = Column(Integer, ForeignKey("semestres.id"))
+    semestres = relationship("Semestres", back_populates="user")
