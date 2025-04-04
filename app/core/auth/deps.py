@@ -1,8 +1,8 @@
 from typing import AsyncGenerator
 
+import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials
-import jwt
 from jwt import PyJWTError
 from sqlalchemy.ext.asyncio import AsyncSession
 

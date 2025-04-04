@@ -5,10 +5,10 @@ from sqladmin.authentication import AuthenticationBackend
 from sqlalchemy.future import select
 
 from app.core.auth.auth import create_access_token
-from app.core.configs import settings
-from app.core.database import Session, engine
 from app.core.auth.deps import validate_form_token
 from app.core.auth.security import verify_password
+from app.core.configs import settings
+from app.core.database import Session, engine
 from app.models.user import User
 from app.schemas.user_schema import UserLoginSchema
 

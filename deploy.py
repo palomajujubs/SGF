@@ -1,5 +1,5 @@
-import subprocess
 import os
+import subprocess
 
 # Caminho para a pasta do repositório Git
 REPO_DIR = os.getcwd()

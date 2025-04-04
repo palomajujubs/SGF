@@ -9,9 +9,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
 from app.core.auth.auth import create_token_form_access
-from app.core.configs import config
 from app.core.auth.deps import get_session
 from app.core.auth.security import generate_password_hash, verify_password
+from app.core.configs import config
 from app.models.user import User as UserModel
 from app.schemas.user_schema import (
     EmailSchema,
@@ -35,7 +35,7 @@ async def teste(session: AsyncSession = Depends(get_session)) -> str:
 async def enviar_link_acesso(email_schema: EmailSchema):
     email = email_schema.email
 
-    # Simulando a criação do token sem armazenar o email no banco
+    # Simulando a criação do token sem armazenar o email no banco.
     token = create_token_form_access(sub=email)
 
     # Construir o link de acesso com o token JWT

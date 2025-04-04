@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 
-from fastapi.security import HTTPBearer
 import jwt
+from fastapi.security import HTTPBearer
 from pytz import timezone
 
 from app.core.configs import settings
